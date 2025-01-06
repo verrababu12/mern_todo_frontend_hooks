@@ -1,0 +1,124 @@
+.todo-item-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 8px;
+  background-image: linear-gradient(to right, #fa7ddf, #7da9df);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.todo-item-container:hover {
+  transform: scale(1.02);
+}
+
+/* Checkbox styling */
+.checkbox-input {
+  margin-right: 15px;
+  transform: scale(1.2);
+  cursor: pointer;
+  height: 20px;
+}
+
+.checkbox-label {
+  flex-grow: 1;
+  font-size: 16px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.checkbox-label.checked {
+  text-decoration: line-through;
+  color: #19034b;
+}
+
+/* Edit input styling */
+.edit-input {
+  width: 75%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #4caf50;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Icon containers */
+.edit-icon-container,
+.delete-icon-container {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.edit-icon {
+  color: #1a1e18;
+  transition: color 0.3s ease;
+  font-size: 22px;
+}
+
+.edit-icon:hover {
+  color: #011402;
+}
+
+.delete-icon {
+  color: #e53935;
+  transition: color 0.3s ease;
+  font-size: 22px;
+}
+
+.delete-icon:hover {
+  color: #d32f2f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .todo-item-container {
+    padding: 8px;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+  }
+
+  .checkbox-label {
+    font-size: 14px;
+  }
+
+  .edit-input {
+    width: 70%;
+    font-size: 14px;
+  }
+
+  .edit-icon,
+  .delete-icon {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .todo-item-container {
+    padding: 6px;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .checkbox-input {
+    margin-right: 10px;
+    transform: scale(1);
+    height: 18px;
+  }
+
+  .checkbox-label {
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+
+  .edit-input {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .edit-icon,
+  .delete-icon {
+    font-size: 18px;
+    margin-left: 5px;
+  }
+}
